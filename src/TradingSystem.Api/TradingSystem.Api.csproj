@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradingSystem.Application\TradingSystem.Application.csproj" />
+    <ProjectReference Include="..\TradingSystem.Infrastructure\TradingSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\TradingSystem.Domain\TradingSystem.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradingSystem.Domain\TradingSystem.Domain.csproj" />
+    <ProjectReference Include="..\TradingSystem.Application\TradingSystem.Application.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<!-- EF Core -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+
+		<!-- Caching -->
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.0" />
+		<PackageReference Include="StackExchange.Redis" Version="2.9.32" />
+
+		<!-- Messaging -->
+		<PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+
+		<!-- Logging -->
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+
+		<!-- JSON Serialization -->
+
+		<!-- Optional utilities -->
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

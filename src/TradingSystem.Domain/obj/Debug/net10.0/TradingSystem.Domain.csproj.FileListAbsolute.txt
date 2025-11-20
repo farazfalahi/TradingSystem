@@ -1,0 +1,11 @@
+D:\FarazTradingSystem\src\TradingSystem.Domain\bin\Debug\net10.0\TradingSystem.Domain.deps.json
+D:\FarazTradingSystem\src\TradingSystem.Domain\bin\Debug\net10.0\TradingSystem.Domain.dll
+D:\FarazTradingSystem\src\TradingSystem.Domain\bin\Debug\net10.0\TradingSystem.Domain.pdb
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\TradingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\TradingSystem.Domain.AssemblyInfoInputs.cache
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\TradingSystem.Domain.AssemblyInfo.cs
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\TradingSystem.Domain.csproj.CoreCompileInputs.cache
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\TradingSystem.Domain.dll
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\refint\TradingSystem.Domain.dll
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\TradingSystem.Domain.pdb
+D:\FarazTradingSystem\src\TradingSystem.Domain\obj\Debug\net10.0\ref\TradingSystem.Domain.dll
