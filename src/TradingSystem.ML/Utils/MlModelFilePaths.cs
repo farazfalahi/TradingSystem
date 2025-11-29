@@ -13,7 +13,7 @@ public static class MlModelFilePaths
         return DefaultModelsFolder;
     }
 
-    public static string GetModelPath(string? folder = null, string? fileName = null)
+    public static string GetModelPath(string folder = null, string fileName = null)
     {
         var f = folder ?? DefaultModelsFolder;
         if (!Directory.Exists(f)) Directory.CreateDirectory(f);

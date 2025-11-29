@@ -5,7 +5,6 @@ using System.Net.Http.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using TradingSystem.Application.DTOs;
-using TradingSystem.DataCollector.DTOs;
 using TradingSystem.DataCollector.Services;
 namespace TradingSystem.DataCollector.Utils;
 
@@ -20,13 +19,13 @@ public class RestMarketClient : IHttpMarketClient
         _rateLimiter = rateLimiter;
     }
 
-    public async Task<IEnumerable<CandleDto>> GetHistoricalCandlesAsync(string symbol, DateTime from, DateTime to, CancellationToken ct = default)
+    public async Task<IEnumerable<DTOs.CandleDto>> GetHistoricalCandlesAsync(string symbol, DateTime from, DateTime to, CancellationToken ct = default)
     {
         // مثال endpoint: /candles?symbol=XYZ&from=...&to=...
         var url = $"candles?symbol={symbol}&from={from:O}&to={to:O}";
         if (!await _rateLimiter.AcquireAsync(ct)) throw new Exception("Rate limit exceeded");
-        var res = await _http.GetFromJsonAsync<IEnumerable<CandleDto>>(url, ct);
-        return res ?? Array.Empty<CandleDto>();
+        var res = await _http.GetFromJsonAsync<IEnumerable<DTOs.CandleDto>>(url, ct);
+        return res ?? Array.Empty<DTOs.CandleDto>();
     }
 
     public async Task<IEnumerable<MarketTickDto>> GetTicksBatchAsync(IEnumerable<string> symbols, CancellationToken ct = default)
@@ -36,10 +35,5 @@ public class RestMarketClient : IHttpMarketClient
         if (!await _rateLimiter.AcquireAsync(ct)) throw new Exception("Rate limit exceeded");
         var res = await _http.GetFromJsonAsync<IEnumerable<MarketTickDto>>(url, ct);
         return res ?? Array.Empty<MarketTickDto>();
-    }
-
-    Task<IEnumerable<MarketTickDto>> IHttpMarketClient.GetTicksBatchAsync(IEnumerable<string> symbols, CancellationToken ct)
-    {
-        throw new NotImplementedException();
     }
 }

@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using TradingSystem.Api.Services;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using TradingSystem.Application.Services;
 
 namespace TradingSystem.Api.Controllers
 {
@@ -8,17 +8,14 @@ namespace TradingSystem.Api.Controllers
     [Route("api/[controller]")]
     public class InstrumentController : ControllerBase
     {
-        private readonly IMarketQueryService _svc;
+        private readonly MarketQueryService _marketQueryService;
 
-        public InstrumentController(IMarketQueryService svc)
-        {
-            _svc = svc;
-        }
+        public InstrumentController(MarketQueryService marketQueryService) => _marketQueryService = marketQueryService;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var list = await _svc.GetInstrumentsAsync();
+            var list = await _marketQueryService.GetInstrumentsAsync();
             return Ok(list);
         }
     }

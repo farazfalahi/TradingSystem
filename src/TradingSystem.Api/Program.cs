@@ -5,7 +5,6 @@ using Microsoft.Extensions.Hosting;
 using Refit;
 using System;
 using TradingSystem.Api.Clients;
-using TradingSystem.Api.Services;
 using TradingSystem.Application.Services;
 using TradingSystem.Infrastructure.Messaging;
 
@@ -32,10 +31,10 @@ if (!string.IsNullOrEmpty(collectorBase))
 
 // Register application services
 // NOTE: replace these with your actual registrations
-builder.Services.AddScoped<IMarketQueryService, MarketQueryService>();
+//builder.Services.AddScoped<IMarketQueryService, MarketQueryService>();
 
 // Register IMarketDataService from Application layer (assumed implemented)
-builder.Services.AddScoped<TradingSystem.Application.Services.IMarketDataService, TradingSystem.Application.Services.MarketDataService>();
+//builder.Services.AddScoped<TradingSystem.Application.Services.IMarketDataService, TradingSystem.Application.Services.MarketDataService>();
 
 // Register IRabbitMqService (from Infrastructure) — ensure Infrastructure DI is called before or register here
 // Example quick registration with defaults (replace with proper DI from Infrastructure project)

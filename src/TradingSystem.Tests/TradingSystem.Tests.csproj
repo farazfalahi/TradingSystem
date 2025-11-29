@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="8.8.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.0" />
+    <PackageReference Include="NSubstitute" Version="5.3.0" />
+    <PackageReference Include="RabbitMQ.Client" Version="7.2.0" />
+    <PackageReference Include="Testcontainers" Version="4.9.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradingSystem.Api\TradingSystem.Api.csproj" />
+    <ProjectReference Include="..\TradingSystem.Application\TradingSystem.Application.csproj" />
+    <ProjectReference Include="..\TradingSystem.DataCollector\TradingSystem.DataCollector.csproj" />
+    <ProjectReference Include="..\TradingSystem.Domain\TradingSystem.Domain.csproj" />
+    <ProjectReference Include="..\TradingSystem.Infrastructure\TradingSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\TradingSystem.ML\TradingSystem.ML.csproj" />
+    <ProjectReference Include="..\TradingSystem.Worker\TradingSystem.Worker.csproj" />
+  </ItemGroup>
+
+</Project>

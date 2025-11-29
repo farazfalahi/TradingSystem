@@ -6,16 +6,20 @@ namespace TradingSystem.Worker.Hosted
 {
     public class WorkerService : BackgroundService
     {
-        private readonly IQueueConsumerService _consumer;
+        //private readonly IQueueConsumerService _consumer;
 
-        public WorkerService(IQueueConsumerService consumer)
-        {
-            _consumer = consumer;
-        }
+        //public WorkerService(IQueueConsumerService consumer)
+        //{
+        //    _consumer = consumer;
+        //}
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        //protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        //{
+        //    await _consumer.StartAsync(stoppingToken);
+        //}
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            await _consumer.StartAsync(stoppingToken);
+            throw new System.NotImplementedException();
         }
     }
 }

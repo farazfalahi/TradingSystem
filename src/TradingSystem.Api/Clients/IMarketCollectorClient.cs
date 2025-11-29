@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Refit;
-using TradingSystem.Api.Dto;
+using TradingSystem.Application.DTOs;
 
 namespace TradingSystem.Api.Clients
 {

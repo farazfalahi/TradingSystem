@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TradingSystem.Api.Dto;
+namespace TradingSystem.Application.DTOs;
 
 public class CandleDto
 {

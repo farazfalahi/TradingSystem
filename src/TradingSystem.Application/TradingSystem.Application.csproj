@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TradingSystem.Domain\TradingSystem.Domain.csproj" />
+    <ProjectReference Include="..\TradingSystem.ML\TradingSystem.ML.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
