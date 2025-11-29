@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using TradingSystem.DataCollector.DTOs;
+using TradingSystem.Domain.Entities;
 using TradingSystem.Infrastructure.Repositories;
 namespace TradingSystem.DataCollector.Services;
 
@@ -37,12 +39,17 @@ public class Bootstrapper
                     var from = to.AddYears(-1);
                     var candles = await _httpClient.GetHistoricalCandlesAsync(s, from, to, ct);
                     // تبدیل و ذخیره در repository
-                    await _instruments.SaveHistoricalCandlesAsync(s, candles);
+                    await _instruments.SaveHistoricalCandlesAsync(s, ToCandels(candles));
                 }
                 finally { sem.Release(); }
             }, ct));
         }
 
         await Task.WhenAll(tasks);
+    }
+
+    private IEnumerable<MarketData> ToCandels(IEnumerable<CandleDto> candles)
+    {
+        throw new NotImplementedException();
     }
 }
